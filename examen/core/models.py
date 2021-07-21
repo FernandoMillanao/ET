@@ -45,3 +45,14 @@ class Arbustos(models.Model):
     def __int__(self):
         return self.arbustos
 
+
+#Modelo Suscripciones 
+
+class Registro(models.Model):
+    correo= models.CharField(max_length=40, primary_key=True, verbose_name='Correo')
+    nombre= models.CharField(max_length=60, verbose_name='Nombre')
+
+    def __str__(self):
+        return self.nombre
+
+
