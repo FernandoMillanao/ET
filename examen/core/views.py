@@ -15,7 +15,7 @@ def venta(request):
 
 def venta(request):
     flores= Flores.objects.all()
-
+    tierradehojas= Tierradehojas.objects.all()
 
     datos= {
         'flores': flores
@@ -24,30 +24,23 @@ def venta(request):
 
 
 
+
+
+
     return render(request, 'core/venta.html', datos)
 
 
 def venta1(request):
-    return render(request, 'core/venta.html')
+    return render(request, 'core/venta1.html')
 
 
 def venta1(request):
     macetas= maceteros.objects.all()
 
-    datos1= {
+    datos= {
         'macetas': macetas
     }
 
-    return render(request, 'core/venta1.html', datos1)
+    return render(request, 'core/venta1.html', datos)
 
 
-def venta2(request):
-    return render(request, 'core/venta2.html')
-
-def venta2(request):
-    tierradehojas= Tierradehojas.objects.all()
-
-    datos2= {
-        'tierradehojas' : tierradehojas
-    }
-    return render(request, 'core/venta2.html', datos2)
